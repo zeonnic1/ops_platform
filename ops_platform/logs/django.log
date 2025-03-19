@@ -1,0 +1,1546 @@
+ERROR 2025-03-08 13:37:41,571 log 26952 12300 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 13, in get
+    logger("ssss")
+TypeError: 'Logger' object is not callable
+ERROR 2025-03-08 13:37:41,572 basehttp 26952 12300 "GET /home/test/ HTTP/1.1" 500 96125
+ERROR 2025-03-08 13:39:30,118 log 27844 29368 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 13, in get
+    logger.indo(111)
+AttributeError: 'Logger' object has no attribute 'indo'
+ERROR 2025-03-08 13:39:30,119 basehttp 27844 29368 "GET /home/test/ HTTP/1.1" 500 96394
+ERROR 2025-03-08 14:55:12,226 views 19956 11548 Test error log
+INFO 2025-03-08 14:56:37,657 autoreload 32816 20316 Watching for file changes with StatReloader
+INFO 2025-03-08 14:56:41,181 views 32816 22932 Test INFO log
+ERROR 2025-03-08 14:56:41,181 views 32816 22932 Test error log
+INFO 2025-03-08 14:56:41,192 basehttp 32816 22932 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:23:05,063 autoreload 30468 12344 Watching for file changes with StatReloader
+INFO 2025-03-08 15:24:25,432 autoreload 39868 38216 Watching for file changes with StatReloader
+INFO 2025-03-08 15:24:30,854 views 39868 3296 Test INFO log
+ERROR 2025-03-08 15:24:30,854 views 39868 3296 Test error log
+INFO 2025-03-08 15:24:30,865 basehttp 39868 3296 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:24:42,416 autoreload 39868 38216 D:\code\ops_platform\utils\middleware.py changed, reloading.
+INFO 2025-03-08 15:24:42,996 autoreload 5868 35064 Watching for file changes with StatReloader
+INFO 2025-03-08 15:24:43,266 views 5868 32180 Test INFO log
+ERROR 2025-03-08 15:24:43,267 views 5868 32180 Test error log
+INFO 2025-03-08 15:24:43,280 basehttp 5868 32180 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:24:52,662 autoreload 5868 35064 D:\code\ops_platform\ops_platform\apps\home\views.py changed, reloading.
+INFO 2025-03-08 15:24:53,234 autoreload 14672 28308 Watching for file changes with StatReloader
+INFO 2025-03-08 15:24:53,530 basehttp 14672 12428 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:25:15,880 basehttp 14672 12428 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:28:03,252 autoreload 30164 15336 Watching for file changes with StatReloader
+INFO 2025-03-08 15:28:05,242 basehttp 30164 18944 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:28:11,033 basehttp 30164 18944 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:28:37,513 basehttp 30164 18944 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:28:37,854 autoreload 30164 15336 D:\code\ops_platform\ops_platform\apps\home\views.py changed, reloading.
+INFO 2025-03-08 15:28:38,471 autoreload 14308 28892 Watching for file changes with StatReloader
+INFO 2025-03-08 15:28:48,821 views 14308 34996 Test info log
+INFO 2025-03-08 15:28:48,832 basehttp 14308 34996 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:28:56,868 views 14308 34996 Test info log
+INFO 2025-03-08 15:28:56,870 basehttp 14308 34996 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:29:49,882 autoreload 14188 14544 Watching for file changes with StatReloader
+INFO 2025-03-08 15:29:52,357 views 14188 9720 Test info log
+INFO 2025-03-08 15:29:52,368 basehttp 14188 9720 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:30:34,883 autoreload 36088 37880 Watching for file changes with StatReloader
+INFO 2025-03-08 15:30:36,733 views 36088 40276 Test info log
+WARNING 2025-03-08 15:30:36,743 middleware 36088 40276 请求路径: /home/test/ 请求耗时：cost_time
+INFO 2025-03-08 15:30:36,744 basehttp 36088 40276 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:30:50,736 views 36088 40276 Test info log
+WARNING 2025-03-08 15:30:50,737 middleware 36088 40276 请求路径: /home/test/ 请求耗时：cost_time
+INFO 2025-03-08 15:30:50,738 basehttp 36088 40276 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:30:50,841 autoreload 36088 37880 D:\code\ops_platform\utils\middleware.py changed, reloading.
+INFO 2025-03-08 15:30:51,467 autoreload 17156 32936 Watching for file changes with StatReloader
+INFO 2025-03-08 15:30:54,001 views 17156 29088 Test info log
+WARNING 2025-03-08 15:30:54,012 middleware 17156 29088 请求路径: /home/test/ 请求耗时：0.010998010635375977
+INFO 2025-03-08 15:30:54,012 basehttp 17156 29088 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:31:20,908 autoreload 17156 32936 D:\code\ops_platform\utils\middleware.py changed, reloading.
+INFO 2025-03-08 15:31:21,494 autoreload 36980 8256 Watching for file changes with StatReloader
+INFO 2025-03-08 15:31:38,662 autoreload 25924 39804 Watching for file changes with StatReloader
+INFO 2025-03-08 15:31:45,633 autoreload 38292 39376 Watching for file changes with StatReloader
+INFO 2025-03-08 15:31:47,680 views 38292 36208 Test info log
+WARNING 2025-03-08 15:31:47,690 middleware 38292 36208 请求路径: /home/test/ 请求耗时：0.010998249053955078
+INFO 2025-03-08 15:31:47,690 basehttp 38292 36208 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:31:54,358 autoreload 38292 39376 D:\code\ops_platform\utils\middleware.py changed, reloading.
+INFO 2025-03-08 15:31:54,919 autoreload 40252 24316 Watching for file changes with StatReloader
+INFO 2025-03-08 15:31:55,170 views 40252 40208 Test info log
+WARNING 2025-03-08 15:31:55,183 middleware 40252 40208 请求路径: /home/test/ 请求耗时：0.014000892639160156
+INFO 2025-03-08 15:31:55,183 basehttp 40252 40208 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:32:02,515 autoreload 40252 24316 D:\code\ops_platform\utils\middleware.py changed, reloading.
+INFO 2025-03-08 15:32:03,139 autoreload 2432 26584 Watching for file changes with StatReloader
+INFO 2025-03-08 15:32:14,634 views 2432 21936 Test info log
+WARNING 2025-03-08 15:32:14,644 middleware 2432 21936 请求路径: /home/test/ 请求耗时：0.010043859481811523
+INFO 2025-03-08 15:32:14,645 basehttp 2432 21936 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:33:26,263 autoreload 2432 26584 D:\code\ops_platform\ops_platform\settings\dev.py changed, reloading.
+INFO 2025-03-08 15:33:26,860 autoreload 17348 33020 Watching for file changes with StatReloader
+INFO 2025-03-08 15:33:27,032 views 17348 13100 Test info log
+WARNING 2025-03-08 15:33:27,045 middleware 17348 13100 请求路径: /home/test/ 请求耗时：0.013001203536987305
+INFO 2025-03-08 15:33:27,046 basehttp 17348 13100 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:33:32,053 views 17348 13100 Test info log
+WARNING 2025-03-08 15:33:32,054 middleware 17348 13100 请求路径: /home/test/ 请求耗时：0.0019989013671875
+INFO 2025-03-08 15:33:32,055 basehttp 17348 13100 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:33:43,727 autoreload 25532 35028 Watching for file changes with StatReloader
+INFO 2025-03-08 15:33:45,753 views 25532 40148 Test info log
+WARNING 2025-03-08 15:33:45,763 middleware 25532 40148 请求路径: /home/test/ 请求耗时：0.010296821594238281
+INFO 2025-03-08 15:33:45,764 basehttp 25532 40148 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:35:43,261 autoreload 1784 37820 Watching for file changes with StatReloader
+INFO 2025-03-08 15:35:54,558 views 1784 14132 Test info log
+WARNING 2025-03-08 15:35:54,573 middleware 1784 14132 请求路径: /home/test/ 请求耗时：0.015935659408569336
+INFO 2025-03-08 15:35:54,574 basehttp 1784 14132 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:36:04,051 views 1784 14132 Test info log
+WARNING 2025-03-08 15:36:04,053 middleware 1784 14132 请求路径: /home/test/ 请求耗时：0.002000570297241211
+INFO 2025-03-08 15:36:04,053 basehttp 1784 14132 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:41:25,812 autoreload 1784 37820 D:\code\ops_platform\ops_platform\settings\dev.py changed, reloading.
+INFO 2025-03-08 15:41:26,392 autoreload 12268 18336 Watching for file changes with StatReloader
+INFO 2025-03-08 15:42:12,326 autoreload 37996 29464 Watching for file changes with StatReloader
+INFO 2025-03-08 15:42:16,091 views 37996 35520 Test info log
+WARNING 2025-03-08 15:42:16,100 middleware 37996 35520 请求路径: /home/test/ 请求耗时：0.010001182556152344
+INFO 2025-03-08 15:42:16,101 basehttp 37996 35520 "GET /home/test/ HTTP/1.1" 200 5139
+INFO 2025-03-08 15:45:32,604 autoreload 26604 26856 Watching for file changes with StatReloader
+INFO 2025-03-08 15:46:34,600 views 26604 14232 Test info log
+WARNING 2025-03-08 15:46:34,611 middleware 26604 14232 请求路径: /home/test/ 请求耗时：0.010999441146850586
+INFO 2025-03-08 15:46:34,612 basehttp 26604 14232 "GET /home/test/ HTTP/1.1" 200 5139
+WARNING 2025-03-08 15:48:42,163 middleware 9700 2864 请求路径: /home/test/ 请求耗时：0.010998725891113281
+WARNING 2025-03-08 15:48:56,274 middleware 9700 2864 请求路径: /home/test/ 请求耗时：0.0020024776458740234
+INFO 2025-03-08 15:53:56,983 views 23544 7080 Test info log
+INFO 2025-03-08 16:01:21,266 views 27660 7064 Test info log
+ERROR 2025-03-08 16:01:21,368 log 27660 7064 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+INFO 2025-03-08 16:07:13,677 views 3860 30768 Test info log
+ERROR 2025-03-08 16:07:13,698 log 3860 30768 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+INFO 2025-03-08 16:13:24,709 views 2864 25768 Test info log
+ERROR 2025-03-08 16:13:24,731 log 2864 25768 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+INFO 2025-03-08 16:14:36,794 views 40160 28888 Test info log
+ERROR 2025-03-08 16:14:36,894 log 40160 28888 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+INFO 2025-03-08 16:21:01,481 views 31756 18964 Test info log
+ERROR 2025-03-08 16:21:01,561 log 31756 18964 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+INFO 2025-03-08 16:21:39,033 views 31756 18964 Test info log
+ERROR 2025-03-08 16:21:39,093 log 31756 18964 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+ERROR 2025-03-08 16:23:44,040 log 18140 6072 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+ERROR 2025-03-08 16:24:32,216 log 18140 6072 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+ERROR 2025-03-08 16:30:38,981 log 30816 1336 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+ERROR 2025-03-08 16:39:20,832 log 30816 27312 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+ERROR 2025-03-08 16:46:33,670 log 29860 5868 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+ERROR 2025-03-08 16:46:45,201 log 29552 37040 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+ERROR 2025-03-08 16:49:52,571 log 31520 27532 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+ERROR 2025-03-08 16:51:15,136 log 19024 5324 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+  File "D:\code\ops_platform\ops_platform\utils\exceptions.py", line 17, in custom_exception_handler
+    if isinstance(DatabaseError, exc):
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+ERROR 2025-03-08 16:51:55,346 log 2864 6520 Internal Server Error: /home/test/
+Traceback (most recent call last):
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\ops_platform\apps\home\views.py", line 16, in get
+    raise DatabaseError
+django.db.utils.DatabaseError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+  File "D:\code\ops_platform\ops_platform\utils\exceptions.py", line 17, in custom_exception_handler
+    if isinstance(DatabaseError, exc):
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+ERROR 2025-03-08 16:53:00,544 log 20524 19100 Insufficient Storage: /home/test/
+ERROR 2025-03-08 16:53:02,638 log 20524 19100 Insufficient Storage: /home/test/
+WARNING 2025-03-08 20:22:19,239 log 15496 33008 Not Found: /
+WARNING 2025-03-08 22:08:25,220 log 19356 40428 Bad Request: /users/jwt/access
+WARNING 2025-03-08 22:08:30,237 log 19356 40428 Bad Request: /users/jwt/access
+WARNING 2025-03-08 22:11:19,366 log 19356 34484 Bad Request: /users/jwt/verify
+WARNING 2025-03-10 12:37:31,347 log 4776 26016 Not Found: /users/login
+WARNING 2025-03-10 12:40:09,957 log 4776 16640 Not Found: /users
+WARNING 2025-03-10 12:40:35,955 log 4776 16640 Not Found: /users/login
+WARNING 2025-03-10 12:42:04,361 log 4776 27272 Not Found: /users/login
+WARNING 2025-03-10 12:49:23,416 log 4776 18264 Bad Request: /users
+WARNING 2025-03-10 12:49:43,698 log 4776 26712 Bad Request: /users
+WARNING 2025-03-10 12:50:44,025 log 4776 15920 Bad Request: /
+WARNING 2025-03-10 12:52:05,100 log 4776 19756 Bad Request: /users
+WARNING 2025-03-10 12:57:41,536 log 4776 7756 Bad Request: /
+WARNING 2025-03-10 12:57:41,889 log 4776 7992 Bad Request: /favicon.ico
+WARNING 2025-03-10 12:58:18,776 log 4776 17592 Bad Request: /
+WARNING 2025-03-10 12:58:18,988 log 4776 6852 Bad Request: /favicon.ico
+WARNING 2025-03-10 12:58:34,476 log 4776 26100 Bad Request: /users/login/
+WARNING 2025-03-10 12:58:42,415 log 4776 12792 Bad Request: /users/login/
+WARNING 2025-03-10 12:59:08,473 log 4776 25796 Bad Request: /users
+WARNING 2025-03-10 12:59:08,676 log 4776 25444 Bad Request: /favicon.ico
+WARNING 2025-03-10 12:59:44,334 log 27220 11064 Not Found: /users
+WARNING 2025-03-10 12:59:44,478 log 27220 11064 Not Found: /favicon.ico
+WARNING 2025-03-10 12:59:48,672 log 27220 11064 Not Found: /users
+WARNING 2025-03-10 12:59:52,970 log 27220 11064 Not Found: /users/login
+WARNING 2025-03-10 13:06:16,635 log 24392 6180 Method Not Allowed: /users/login
+WARNING 2025-03-10 13:06:47,576 log 24392 26032 Not Found: /users/login/
+WARNING 2025-03-10 13:06:51,194 log 24392 26032 Not Found: /users/login/
+WARNING 2025-03-10 13:09:28,604 log 24392 6180 Method Not Allowed: /users/login
+WARNING 2025-03-12 13:31:18,882 log 12248 3832 Bad Request: /
+WARNING 2025-03-12 13:31:19,382 log 12248 5016 Bad Request: /favicon.ico
+WARNING 2025-03-12 13:31:26,377 log 12248 14052 Bad Request: /login/
+WARNING 2025-03-12 13:31:26,575 log 12248 19120 Bad Request: /favicon.ico
+WARNING 2025-03-12 13:31:36,886 log 12248 14684 Bad Request: /login/
+WARNING 2025-03-12 13:31:37,277 log 12248 8412 Bad Request: /favicon.ico
+WARNING 2025-03-12 13:32:16,200 log 12248 21272 Not Found: /users
+WARNING 2025-03-12 13:32:24,656 log 12248 21272 Bad Request: /users/login
+WARNING 2025-03-12 14:12:50,280 log 21932 9588 Bad Request: /users/login
+WARNING 2025-03-12 14:12:53,742 log 21932 9588 Bad Request: /users/login
+WARNING 2025-03-12 14:13:25,577 log 21932 9588 Unauthorized: /users/login
+WARNING 2025-03-12 17:01:47,258 log 22436 22944 Method Not Allowed: /users/login
+WARNING 2025-03-12 17:01:47,924 log 22436 22128 Not Found: /favicon.ico
+ERROR 2025-03-12 17:01:59,018 log 22436 22916 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'type' object is not iterable
+WARNING 2025-03-12 17:02:04,397 log 22436 22916 Not Found: /host
+ERROR 2025-03-12 17:02:11,219 log 22436 22916 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'type' object is not iterable
+ERROR 2025-03-12 17:02:56,629 log 22436 22916 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'type' object is not iterable
+ERROR 2025-03-12 17:03:13,479 log 22436 22944 Internal Server Error: /hosts/host_category/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'type' object is not iterable
+WARNING 2025-03-12 19:24:41,501 log 20816 23604 Not Found: /users/
+ERROR 2025-03-12 19:24:48,678 log 20816 23604 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'type' object is not iterable
+ERROR 2025-03-12 19:24:48,929 log 20816 23604 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'type' object is not iterable
+ERROR 2025-03-12 19:26:55,155 log 22820 1428 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 42, in list
+    serializer = self.get_serializer(page, many=True)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\generics.py", line 112, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\generics.py", line 126, in get_serializer_class
+    assert self.serializer_class is not None, (
+AssertionError: 'HostApiViews' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+ERROR 2025-03-12 19:27:28,865 log 22868 22244 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'SerializerMetaclass' object is not iterable
+ERROR 2025-03-12 19:31:29,315 log 5140 528 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 42, in list
+    serializer = self.get_serializer(page, many=True)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\generics.py", line 112, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\generics.py", line 126, in get_serializer_class
+    assert self.serializer_class is not None, (
+AssertionError: 'HostApiViews' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+WARNING 2025-03-12 19:43:21,866 log 19900 17412 Not Found: /hostsCategory
+WARNING 2025-03-12 19:43:30,219 log 19900 22724 Not Found: /hosts/hostsCategory/
+WARNING 2025-03-12 19:46:45,095 log 5848 21452 Unauthorized: /hosts/host_category/
+ERROR 2025-03-12 19:46:59,167 log 22112 24284 Internal Server Error: /hosts/host_category/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'type' object is not iterable
+WARNING 2025-03-12 19:48:34,649 log 11772 17528 Unauthorized: /hosts/
+WARNING 2025-03-12 19:48:34,764 log 11772 17528 Unauthorized: /hosts/
+ERROR 2025-03-12 19:55:08,260 log 21132 19252 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'type' object is not iterable
+ERROR 2025-03-12 20:02:35,251 log 21740 19900 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 145, in initialize_request
+    request = super().initialize_request(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 394, in initialize_request
+    authenticators=self.get_authenticators(),
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 272, in get_authenticators
+    return [auth() for auth in self.authentication_classes]
+TypeError: 'type' object is not iterable
+WARNING 2025-03-12 20:06:06,813 log 21488 19696 Unauthorized: /hosts/host_category/
+WARNING 2025-03-12 22:45:28,447 log 18920 17244 Unauthorized: /hosts/
+WARNING 2025-03-12 22:45:41,742 log 18920 17244 Unauthorized: /hosts/
+WARNING 2025-03-12 22:46:30,613 log 22576 24236 Unauthorized: /hosts/
+WARNING 2025-03-12 23:57:56,010 log 19000 21420 Unauthorized: /hosts/
+WARNING 2025-03-12 23:58:31,400 log 17068 24988 Not Found: /hosts/post/
+WARNING 2025-03-13 00:04:44,559 log 25276 22024 Not Found: /hosts/post/
+WARNING 2025-03-13 00:28:33,921 log 23900 9788 Not Found: /home
+WARNING 2025-03-13 00:28:43,182 log 23900 9788 Not Found: /
+ERROR 2025-03-13 00:39:24,977 log 25240 21736 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\python310\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 358, in render
+    form = data.serializer
+AttributeError: 'dict' object has no attribute 'serializer'
+ERROR 2025-03-13 00:40:13,132 log 2192 24328 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\python310\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 358, in render
+    form = data.serializer
+AttributeError: 'dict' object has no attribute 'serializer'
+ERROR 2025-03-13 00:40:37,692 log 22636 15512 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\python310\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 358, in render
+    form = data.serializer
+AttributeError: 'dict' object has no attribute 'serializer'
+ERROR 2025-03-13 00:46:17,499 log 18104 23604 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\python310\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 358, in render
+    form = data.serializer
+AttributeError: 'dict' object has no attribute 'serializer'
+WARNING 2025-03-13 00:51:50,846 log 18704 16116 Not Found: /hosts/
+WARNING 2025-03-13 00:51:57,331 log 18704 16116 Not Found: /hosts/
+WARNING 2025-03-13 00:53:49,646 log 18704 16116 Not Found: /hosts/
+WARNING 2025-03-13 00:54:06,307 log 18704 16116 Not Found: /hosts/
+WARNING 2025-03-13 01:17:37,864 log 24500 16684 Unauthorized: /hosts/host_category/
+WARNING 2025-03-13 01:17:41,653 log 24500 16684 Unauthorized: /hosts/host_category/
+WARNING 2025-03-13 01:21:30,060 log 19628 10648 Not Found: /hosts/hosts/
+ERROR 2025-03-13 01:23:28,130 log 8760 21568 Internal Server Error: /hosts/hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\python310\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 727, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 659, in get_context
+    raw_data_put_form = self.get_raw_data_form(data, view, 'PUT', request)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 565, in get_raw_data_form
+    data = serializer.data.copy()
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 571, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.get_initial()
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 421, in get_initial
+    for field in self.fields.values()
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'password' was declared on serializer HostsSerializers, but has not been included in the 'fields' option.
+ERROR 2025-03-13 01:23:33,410 log 8760 21568 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\python310\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 727, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 658, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 565, in get_raw_data_form
+    data = serializer.data.copy()
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 571, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.get_initial()
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 421, in get_initial
+    for field in self.fields.values()
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'password' was declared on serializer HostsSerializers, but has not been included in the 'fields' option.
+ERROR 2025-03-13 01:24:11,682 log 8760 21568 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\python310\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 727, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 658, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\renderers.py", line 565, in get_raw_data_form
+    data = serializer.data.copy()
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 571, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.get_initial()
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 421, in get_initial
+    for field in self.fields.values()
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'password' was declared on serializer HostsSerializers, but has not been included in the 'fields' option.
+ERROR 2025-03-13 01:32:41,494 log 17552 24016 Internal Server Error: /hosts/host_category/
+Traceback (most recent call last):
+  File "D:\code\ops_platform\ops_platform\apps\hosts\serializers.py", line 14, in validate
+    raise serializers.ValidationError("不能为空")
+rest_framework.exceptions.ValidationError: [ErrorDetail(string='不能为空', code='invalid')]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 445, in run_validation
+    value = self.validate(value)
+  File "D:\code\ops_platform\ops_platform\apps\hosts\serializers.py", line 13, in validate
+    if name == "":
+TypeError: 'ValidationError' object is not callable
+WARNING 2025-03-13 01:34:48,232 log 10848 17136 Bad Request: /hosts/host_category/
+WARNING 2025-03-13 01:37:29,863 log 10848 17136 Not Found: /hosts/hosts/
+ERROR 2025-03-13 01:47:18,154 log 24624 23864 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'category' was declared on serializer HostsSerializers, but has not been included in the 'fields' option.
+ERROR 2025-03-13 01:47:26,321 log 25272 25504 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1084, in get_fields
+    extra_kwargs, hidden_fields = self.get_uniqueness_extra_kwargs(
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1455, in get_uniqueness_extra_kwargs
+    model_fields = self._get_model_fields(
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1537, in _get_model_fields
+    if '.' in source or source == '*':
+TypeError: argument of type 'DeferredAttribute' is not iterable
+ERROR 2025-03-13 01:47:52,893 log 25196 19892 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1084, in get_fields
+    extra_kwargs, hidden_fields = self.get_uniqueness_extra_kwargs(
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1455, in get_uniqueness_extra_kwargs
+    model_fields = self._get_model_fields(
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1537, in _get_model_fields
+    if '.' in source or source == '*':
+TypeError: argument of type 'DeferredAttribute' is not iterable
+WARNING 2025-03-13 01:48:06,622 log 3928 23404 Bad Request: /hosts/
+ERROR 2025-03-13 01:48:33,592 log 23140 25380 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "D:\code\ops_platform\ops_platform\apps\hosts\serializers.py", line 34, in create
+    instance = Hosts.objects.create(**validated_data)
+  File "D:\python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python310\lib\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "D:\python310\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Hosts() got unexpected keyword arguments: 'HostsCategory'
+WARNING 2025-03-13 01:49:12,933 log 15388 1856 Bad Request: /hosts/
+WARNING 2025-03-13 01:49:30,461 log 23168 25156 Bad Request: /hosts/
+WARNING 2025-03-13 01:51:17,675 log 9128 6860 Bad Request: /hosts/
+WARNING 2025-03-13 15:38:18,615 log 2668 10736 Not Found: /favicon.ico
+ERROR 2025-03-13 16:08:30,376 log 1496 13780 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 373, in fields
+    fields[key] = value
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\utils\serializer_helpers.py", line 167, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\fields.py", line 358, in bind
+    assert self.source != field_name, (
+AssertionError: It is redundant to specify `source='category'` on field 'HostCategorySerializers' in serializer 'HostsSerializers', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2025-03-13 16:09:33,748 log 18420 19148 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'category_name' was declared on serializer HostsSerializers, but has not been included in the 'fields' option.
+ERROR 2025-03-13 16:09:49,038 log 2948 9612 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'category' was declared on serializer HostsSerializers, but has not been included in the 'fields' option.
+ERROR 2025-03-13 16:11:12,834 log 13488 12000 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 373, in fields
+    fields[key] = value
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\utils\serializer_helpers.py", line 167, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\fields.py", line 358, in bind
+    assert self.source != field_name, (
+AssertionError: It is redundant to specify `source='category'` on field 'HostCategorySerializers' in serializer 'HostsSerializers', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2025-03-13 16:18:25,904 log 5204 21384 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 373, in fields
+    fields[key] = value
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\utils\serializer_helpers.py", line 167, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\fields.py", line 358, in bind
+    assert self.source != field_name, (
+AssertionError: It is redundant to specify `source='category'` on field 'HostCategorySerializers' in serializer 'HostsSerializers', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2025-03-13 16:27:57,001 log 22820 17164 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 373, in fields
+    fields[key] = value
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\utils\serializer_helpers.py", line 167, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\fields.py", line 358, in bind
+    assert self.source != field_name, (
+AssertionError: It is redundant to specify `source='category'` on field 'CharField' in serializer 'HostsSerializers', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2025-03-13 16:29:28,527 log 22820 17164 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 373, in fields
+    fields[key] = value
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\utils\serializer_helpers.py", line 167, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\fields.py", line 358, in bind
+    assert self.source != field_name, (
+AssertionError: It is redundant to specify `source='category'` on field 'CharField' in serializer 'HostsSerializers', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2025-03-13 16:37:06,038 log 16764 11572 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Hosts' object has no attribute 'get_category_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `category` on serializer `HostsSerializers`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Hosts` instance.
+Original exception text was: 'Hosts' object has no attribute 'get_category_display'.
+WARNING 2025-03-13 16:39:27,679 log 12132 13800 Bad Request: /hosts/
+ERROR 2025-03-13 16:39:49,779 log 12132 13800 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 445, in run_validation
+    value = self.validate(value)
+  File "D:\code\ops_platform\ops_platform\apps\hosts\serializers.py", line 37, in validate
+    print(data["category_name"])
+KeyError: 'category_name'
+ERROR 2025-03-13 17:22:58,803 log 21628 10064 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `namecategory` is not valid for model `Hosts` in `hosts.serializers.HostsSerializers`.
+ERROR 2025-03-13 17:23:10,140 log 8716 23316 Internal Server Error: /hosts/
+Traceback (most recent call last):
+  File "D:\python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python310\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+  File "D:\python310\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "D:\code\ops_platform\venv\lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `nameip_addr` is not valid for model `Hosts` in `hosts.serializers.HostsSerializers`.
+WARNING 2025-03-13 17:38:00,048 log 21664 20948 Bad Request: /hosts/

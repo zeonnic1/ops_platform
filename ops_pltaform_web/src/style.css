@@ -1,0 +1,26 @@
+/*全局样式和项目初始化配置*/
+
+body,h1,h2,h3,h4, p ,table,tr,td,ul,li,a,form,input,select,option  textarea{
+    margin: 0;
+    padiding:0;
+    font-size: 15px;
+}
+a{
+    text-decoration: none ;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+ul,li{
+    list-style: none;
+}
+
+table{
+    border-collapse: collapse;
+}
+img{
+    outline: none;
+}
+input{
+    outline:none
+}

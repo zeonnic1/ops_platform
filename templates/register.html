@@ -1,0 +1,197 @@
+{#{% extends "base.html" %}#}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-lg">
+        <div class="card-body p-5">
+          <!-- 标题和Logo -->
+          <div class="text-center mb-4">
+            <img src="{% static 'images/logo.png' %}"
+                 alt="运维平台"
+                 class="img-fluid mb-3"
+                 style="max-height: 60px;">
+            <h2 class="h4 text-gray-900">用户注册</h2>
+            <p class="text-muted">创建您的运维平台账户</p>
+          </div>
+
+          <!-- 注册表单 -->
+          <form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+
+            <!-- 全局错误提示 -->
+            {% if form.non_field_errors %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              {% for error in form.non_field_errors %}
+                {{ error }}
+              {% endfor %}
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            {% endif %}
+
+            <!-- 用户名 -->
+            <div class="mb-3">
+              <label for="id_username" class="form-label">
+                <i class="bi bi-person-badge me-2"></i>用户名
+              </label>
+              <input type="text"
+                     name="username"
+                     id="id_username"
+                     class="form-control form-control-lg {% if form.username.errors %}is-invalid{% endif %}"
+                     placeholder="请输入用户名"
+                     required
+                     autofocus
+                     value="{{ form.username.value|default:'' }}">
+              <div class="invalid-feedback">
+                {% for error in form.username.errors %}
+                  {{ error }}
+                {% endfor %}
+              </div>
+            </div>
+
+            <!-- 邮箱 -->
+            <div class="mb-3">
+              <label for="id_email" class="form-label">
+                <i class="bi bi-envelope me-2"></i>电子邮箱
+              </label>
+              <input type="email"
+                     name="email"
+                     id="id_email"
+                     class="form-control form-control-lg {% if form.email.errors %}is-invalid{% endif %}"
+                     placeholder="example@domain.com"
+                     required
+                     value="{{ form.email.value|default:'' }}">
+              <div class="invalid-feedback">
+                {% for error in form.email.errors %}
+                  {{ error }}
+                {% endfor %}
+              </div>
+            </div>
+
+            <!-- 密码 -->
+            <div class="mb-3">
+              <label for="id_password1" class="form-label">
+                <i class="bi bi-lock me-2"></i>密码
+              </label>
+              <input type="password"
+                     name="password1"
+                     id="id_password1"
+                     class="form-control form-control-lg {% if form.password1.errors %}is-invalid{% endif %}"
+                     placeholder="至少8位字符"
+                     required>
+              <div class="invalid-feedback">
+                {% for error in form.password1.errors %}
+                  {{ error }}
+                {% endfor %}
+              </div>
+              <div class="form-text">密码必须包含：大写字母、小写字母和数字</div>
+            </div>
+
+            <!-- 确认密码 -->
+            <div class="mb-4">
+              <label for="id_password2" class="form-label">
+                <i class="bi bi-shield-lock me-2"></i>确认密码
+              </label>
+              <input type="password"
+                     name="password2"
+                     id="id_password2"
+                     class="form-control form-control-lg {% if form.password2.errors %}is-invalid{% endif %}"
+                     placeholder="请再次输入密码"
+                     required>
+              <div class="invalid-feedback">
+                {% for error in form.password2.errors %}
+                  {{ error }}
+                {% endfor %}
+              </div>
+            </div>
+
+            <!-- 服务条款 -->
+            <div class="mb-4 form-check">
+              <input type="checkbox"
+                     class="form-check-input"
+                     id="termsCheck"
+                     required>
+              <label class="form-check-label" for="termsCheck">
+                我已阅读并同意 <a href="#" class="text-decoration-none">服务条款</a>
+              </label>
+            </div>
+
+            <!-- 提交按钮 -->
+            <button type="submit"
+                    class="btn btn-primary btn-lg w-100 mb-3">
+              <i class="bi bi-person-plus me-2"></i>立即注册
+            </button>
+
+            <!-- 社交登录（可选） -->
+            <div class="text-center">
+              <p class="text-muted mb-2">或使用其他方式注册</p>
+              <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="btn btn-outline-dark btn-sm">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-sm">
+                  <i class="bi bi-microsoft"></i> Microsoft
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- 登录提示 -->
+      <div class="text-center mt-4">
+        <p class="text-muted">已有账户？
+          <a href="{% url 'login' %}" class="text-decoration-none">
+            <i class="bi bi-box-arrow-in-right"></i> 立即登录
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- 表单验证脚本 -->
+<script>
+(function () {
+  'use strict'
+
+  // 自定义验证样式
+  const forms = document.querySelectorAll('.needs-validation')
+
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .card {
+    border-radius: 1rem;
+    border: none;
+  }
+  .form-control-lg {
+    padding: 1rem 1.25rem;
+  }
+  .btn-check:focus + .btn-outline-dark,
+  .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+  }
+  .invalid-feedback {
+    display: block;
+  }
+</style>
+{% endblock %}
