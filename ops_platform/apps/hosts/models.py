@@ -31,8 +31,8 @@ class HostsCategory(BaseModel):
 class Hosts(BaseModel):
     category = models.ForeignKey("HostsCategory", on_delete=models.DO_NOTHING, related_name="hc", null=True, blank=True,
                                  verbose_name="主机类别")
-    host_name = models.CharField(max_length=20, blank=True, null=True, verbose_name="主机名称")
-    ip_addr = models.CharField(max_length=20, blank=True, null=True, verbose_name="连接地址")
+    name = models.CharField(max_length=20, blank=True, null=True, verbose_name="主机名称")
+    host_name = models.CharField(max_length=20, blank=True, null=True, verbose_name="连接地址")
     port = models.IntegerField(blank=True, null=True, verbose_name="端口")
     username = models.CharField(max_length=20, blank=True, null=True, verbose_name="用户名")
     users = models.ManyToManyField(Users)

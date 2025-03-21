@@ -1,20 +1,22 @@
 from .models import HostsCategory, Hosts
 from rest_framework import serializers
 
+from ops_platform.utils.ssh import SSH
+
 
 class HostCategorySerializers(serializers.ModelSerializer):
     class Meta:
         model = HostsCategory
         fields = ["id", "name"]
 
-    def validate(self, data):
+    def validate(self, attr):
         try:
-            name = data.get("name")
+            name = attr.get("name")
             if name == "":
                 raise serializers.ValidationError("不能为空")
         except:
             raise serializers.ValidationError("不能为空")
-        return data
+        return attr
 
 
 class HostsSerializers(serializers.ModelSerializer):
@@ -24,12 +26,21 @@ class HostsSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Hosts
-        fields = ['id',  'category', 'category_name', 'host_name', 'ip_addr', 'port', 'username', 'password']
+        fields = ['id', 'category', 'category_name', 'name', 'host_name', 'port', 'username', 'password']
 
     # todo 验证主机登录密码
-    def validate(self, data):
-        print(data)
-        return data
+    def validate(self, attr):
+        hostname = attr.get("host_name")
+        port = attr.get("port")
+        username = attr.get("username")
+        password = attr.get("password")
+        client = SSH(hostname, port, username, password)
+
+        if Hosts.objects.filter(host_name=hostname, port=port).exists():
+            raise serializers.ValidationError("主机名和端口组合已存在。")
+        if client.ping():
+            return attr
+        raise serializers.ValidationError("用户认证失败")
 
     def create(self, validated_data):
         validated_data.pop("password")

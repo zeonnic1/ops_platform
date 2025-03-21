@@ -1,107 +1,125 @@
 <template>
-  <a-form>
-    <a-row :span="6">
-      <div class="add_host" style="margin:15px;">
-        <a-button @click="handleAdd" type="primary">
-          <PlusOutlined/>
-          新建
-        </a-button>
-      </div>
-      <div class="add_hosts" style="margin:15px;">
-        <a-button @click="handleImport" type="primary">
-          <CloudUploadOutlined/>
-          批量导入
-        </a-button>
-      </div>
-    </a-row>
-  </a-form>
-  <a-table :columns="columns" :data-source="host_list">
-    <!--    <template #headerCell="{ column }">-->
-    <template #bodyCell="{column,record }">
+    <a-form>
+      <a-row :span="6">
+        <div class="add_host" style="margin:15px;">
+          <a-button @click="handleAdd" type="primary">
+            <PlusOutlined/>
+            新建
+          </a-button>
+        </div>
+        <div class="add_hosts" style="margin:15px;">
+          <a-button @click="handleImport" type="primary">
+            <CloudUploadOutlined/>
+            批量导入
+          </a-button>
+        </div>
+      </a-row>
+    </a-form>
+
+  <a-table :columns="columns" :dataSource="host_list.data" row-key="id">
+    <template v-slot:bodyCell="{column, record}">
       <template v-if="column.dataIndex === 'action'">
         <a-popconfirm title="sure to delete？" @confirm="deleteHost(record)">
           <a style="color: black">Delete</a>
         </a-popconfirm>
       </template>
-
-      <template v-else-if="column.key === 'action'">
-        <span>
-            <a>Delete</a>
-        </span>
-      </template>
     </template>
-
-
   </a-table>
-  <a-modal v-model:open="hostsVisble" title="新建主机信息" @ok="handle_hosts">
-    <a-form :label-col="{ span: 6 }"
-            :wrapper-col="{ span: 18 }"
-            :ok-button-props="{ disabled: true }"
-            :cancel-button-props="{ disabled: true }"
-            class="add_host"
-    >
-      <a-form-item label="主机类别">
 
-        <a-select v-model="category"
-                  placeholder="请输入category"
-                  ref="select"
-                  show-search
-                  :options="items.map(item => ({ value: item }))"
-        >
-          <template #dropdownRender="{ menuNode: menu }">
-<!--            <v-nodes :vnodes="menu"/>-->
-            <a-divider style="margin: 4px 0"/>
-            <a-space style="padding: 4px 8px">
-              <a-input ref="inputRef" v-model:value="name" placeholder="Please enter item"/>
-              <a-button type="text" @click="addItem">
-                <template #icon>
-                  <plus-outlined/>
-                </template>
-                Add item
-              </a-button>
-            </a-space>
-          </template>
-        </a-select>
+    <a-modal v-model:open="hostsVisble" title="新建主机信息" @ok="handle_hosts">
+      <a-form :label-col="{ span: 6 }"
+              :wrapper-col="{ span: 18 }"
+              :ok-button-props="{ disabled: true }"
+              :cancel-button-props="{ disabled: true }"
+              class="add_host"
+      >
+        <a-form-item label="主机类别">
 
-      </a-form-item>
-      <a-form-item label="ip地址">
-        <a-input v-model="ipAddress" placeholder="请输入ip">
-        </a-input>
-      </a-form-item>
-      <a-form-item label="端口">
-        <a-input v-model="port" placeholder="请输入port">
-        </a-input>
-      </a-form-item>
+          <a-select v-model="category"
+                    placeholder="请输入主机类别"
+                    ref="select"
+                    show-search
+                    :options="items.map(item => ({ value: item }))"
+          >
+            <template #dropdownRender="{ menuNode: menu }">
+              <!--            <v-nodes :vnodes="menu"/>-->
+              <a-divider style="margin: 4px 0"/>
+              <a-space style="padding: 4px 8px">
+                <a-input ref="inputRef" v-model:value="name" placeholder="Please enter item"/>
+                <a-button type="text" @click="addItem">
+                  <template #icon>
+                    <plus-outlined/>
+                  </template>
+                  Add item
+                </a-button>
+              </a-space>
+            </template>
+          </a-select>
 
-      <a-form-item label="备注">
-        <a-input v-model="remark" style="height: 100px">
-        </a-input>
-      </a-form-item>
+        </a-form-item>
+        <a-form-item label="ip地址">
+          <a-input v-model="ipAddress" placeholder="请输入ip">
+          </a-input>
+        </a-form-item>
+        <a-form-item label="端口">
+          <a-input v-model="port" placeholder="请输入port">
+          </a-input>
+        </a-form-item>
 
-    </a-form>
-  </a-modal>
+        <a-form-item label="备注">
+          <a-input v-model="remark" style="height: 100px">
+          </a-input>
+        </a-form-item>
+
+      </a-form>
+    </a-modal>
 </template>
 
 
 <script setup>
 import {PlusOutlined, CloudUploadOutlined} from "@ant-design/icons-vue"
-import {reactive, ref, defineComponent} from "vue";
+import {reactive, ref, toRefs, defineComponent, onMounted, nextTick} from "vue";
 import http from "../http/index.js";
 import setting from "../setting.js";
 
-const VNodes = defineComponent({
-  props: {
-    vnodes: {
-      type: Object,
-      required: true,
-    },
+// const VNodes = defineComponent({
+//   props: {
+//     vnodes: {
+//       type: Object,
+//       required: true,
+//     },
+//   },
+//   render() {
+//     return this.vnodes;
+//   },
+// });
+
+const columns = [
+  {
+    title: 'ip_addr',
+    dataIndex: 'ip_addr',
   },
-  render() {
-    return this.vnodes;
+  {
+    title: 'port',
+    dataIndex: 'port',
   },
-});
+  {
+    title: 'category',
+    dataIndex: 'category',
+  },
+  {
+    title: 'username',
+    dataIndex: 'username',
+  },
+  {
+    title: 'action',
+    dataIndex: 'action',
+  }
+];
+var host_list = reactive({data: []})
+
 let index = 0;
-const items = reactive(['数据库服务器', '前端服务器', '缓存服务器']);
+const items = ref(['数据库服务器', '前端服务器', '缓存服务器']);
 const category = ref();
 const inputRef = ref();
 const name = ref();
@@ -121,65 +139,44 @@ const handle_hosts = e => {
   hostsVisble.value = false;
 
 };
-const columns = [
-  {
-    title: 'ip_add',
-    dataIndex: 'ip_add',
-    key: 'ip_add',
-  },
-  {
-    title: 'port',
-    dataIndex: 'port',
-    key: 'port',
-  },
-  {
-    title: 'category',
-    dataIndex: 'category',
-    key: 'category',
-  },
-  {
-    title: 'remark',
-    dataIndex: 'remark',
-    key: 'remark',
-  },
-  {
-    title: 'action',
-    dataIndex: 'action',
-    key: 'action',
-  }
-];
-
-
-const host_list = reactive({"data": []})
 
 const get_data_list = () => {
-
-  let token = localStorage.getItem("token") || sessionStorage.getItem("token")
-  http.get(setting.host + "/hosts", {
-    headers: {
-      Authorization: "Bearer" + token
-    }
-  }).then(response => {
-    console.log(response.data)
-    host_list.data = response.data
+  nextTick(() => {
+    let token = localStorage.getItem("token") || sessionStorage.getItem("token")
+    http.get(setting.host + "/hosts", {
+      headers: {
+        Authorization: "Bearer" + token
+      }
+    }).then(response => {
+      host_list.data = response.results
+    })
   })
+
 }
 
-
-get_data_list()
 
 const hostsVisble = ref(false)
 
 const handleAdd = () => {
   hostsVisble.value = true
 }
+const resetForm = () => {
+
+}
 const deleteHost = (record) => {
   console.log(record)
+  http.delete(`${setting.host}/hosts/${record.id}`).then(() => {
+    resetForm()
+
+  })
 }
 const handleImport = () => {
 
 }
 
+onMounted(() => {
+  get_data_list()
+})
 </script>
 
 <style scoped>

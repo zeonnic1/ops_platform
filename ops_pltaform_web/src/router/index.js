@@ -24,8 +24,8 @@ const routes = [
                 name: 'Hosts',
                 component: () => import('../views/hosts.vue')
             },
-                        {
-                path: 'ShowCenter',
+            {
+                path: 'show_center',
                 name: 'ShowCenter',
                 component: () => import('../views/ShowCenter.vue')
             }
@@ -42,7 +42,7 @@ const router = createRouter({
 );
 
 router.beforeEach((to, from, next) => {
-
+    console.log("from:",from,"to:", to)
     let token = localStorage.token || sessionStorage.token
     if (to.meta.authenticate && !token) {
         console.log(" back to login")

@@ -14,7 +14,6 @@
           :open-keys="state.openKeys"
           :items="items"
           @click="handleClick"
-          @openChange="onOpenChange"
       ></a-menu>
     </a-layout-sider>
 
@@ -39,7 +38,7 @@
 </template>
 
 <script setup name="Layout">
-import {ref, reactive, h, watch, createVNode,} from 'vue';
+import {ref, reactive, h, watch, createVNode, onMounted,} from 'vue';
 import {
   MenuUnfoldOutlined, MenuFoldOutlined, PieChartOutlined, DesktopOutlined, InboxOutlined,
   MailOutlined,
@@ -86,12 +85,10 @@ const state = reactive({
 
 function handleClick(info) {
   console.log('click', info.item.menu_url);
-  router.push(info.item.menu_url)
+  router.push({path: info.item.menu_url})
   // router.getRoutes(info.item.menu_url)
 }
 
-function onOpenChange() {
-}
 
 const items = reactive([
   {
@@ -99,7 +96,7 @@ const items = reactive([
     icon: () => h(PieChartOutlined),
     label: '展示中心',
     title: 'ShowCenter',
-    menu_url: '/uric/ShowCenter'
+    menu_url: '/uric/show_center'
   },
   {
     key: '2',
@@ -177,6 +174,7 @@ const toggleCollapsed = () => {
   state.collapsed = !state.collapsed;
   state.openKeys = state.collapsed ? [] : state.preOpenKeys;
 };
+
 </script>
 
 <style scoped>

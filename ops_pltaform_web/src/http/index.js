@@ -18,7 +18,7 @@ http.interceptors.request.use((config)=>{
 //响应拦截器
 http.interceptors.response.use((config)=>{
     console.log("服务器响应之后,返回结果给客户端第一时间 执行then之前");
-    return config;
+    return config.data;
     } ,error => {
     console.log("http响应错误")
     return Promise.reject(error)
