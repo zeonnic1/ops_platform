@@ -211,3 +211,5 @@ LOGGING = {
 AUTH_USER_MODEL = "users.Users"
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+RSA_FILE="C:Users\\Administrator\\.ssh\\id_rsa"

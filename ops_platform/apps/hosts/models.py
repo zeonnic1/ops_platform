@@ -43,4 +43,4 @@ class Hosts(BaseModel):
         verbose_name_plural: "主机信息"
 
     def __str__(self):
-        return f"{self.name} {self.ip_addr}:{self.port}"
+        return f"{self.name} {self.host_name}:{self.port}"
