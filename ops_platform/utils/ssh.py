@@ -46,7 +46,7 @@ class SSH(object):
             try:
                 self.connect()
             except(TimeoutError, AuthenticationException, NoValidConnectionsError, Exception):
-                return None
+                return False
         return True
 
     def set_rsa(self):

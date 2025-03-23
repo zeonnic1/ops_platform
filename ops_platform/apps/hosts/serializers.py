@@ -2,6 +2,7 @@ from .models import HostsCategory, Hosts
 from rest_framework import serializers
 
 from ops_platform.utils.ssh import SSH
+from .tasks import check_host_status
 
 
 class HostCategorySerializers(serializers.ModelSerializer):
@@ -24,19 +25,26 @@ class HostsSerializers(serializers.ModelSerializer):
 
     password = serializers.CharField(max_length=100, write_only=True, label="登录密码")
 
-    status = serializers.SerializerMethodField()
+    # status = serializers.SerializerMethodField()
 
     class Meta:
         model = Hosts
-        fields = ['id', 'category', 'category_name', 'name', 'host_name', 'port', 'username', 'password', "status",
+        fields = ['id', 'category', 'category_name', 'name', 'host_name', 'port', 'username', 'password'
                   ]
 
-    def get_status(self, obj):
+    # def get_status(self, obj):
+    #
+    #     client = check_host_status(obj) or False
+    #
+    #     return client
 
-        client = SSH(obj.host_name, obj.port, obj.username)
-        if client.ping():
-            return True
-        return False
+    # def get_status(self, obj):
+    #
+    #
+    #     client = SSH(obj.host_name, obj.port, obj.username)
+    #     if client.ping():
+    #         return True
+    #     return False
 
     # todo 验证主机登录密码
     def validate(self, attr):

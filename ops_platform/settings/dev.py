@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-)1-(agjgypz=*7yh5+ztr%(q*gs@f#q+#kvgg2#_8iz20trd&7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['api.optplat.cn']
+ALLOWED_HOSTS = ['api.optplat.cn', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -50,9 +50,18 @@ INSTALLED_APPS = [
     'dal_select2',
     'nested_admin',
     'corsheaders',
-    'hosts'
+    'hosts',
+    'channels'
 
 ]
+
+ASGI_APPLICATION = 'ops_platform.asgi.application'
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -177,11 +186,14 @@ LOGGING = {
         },
     },
     "handlers": {  # 定义了三种日志处理方式
-        # "mail_admins": {  # 只有debug=False且Error级别以上发邮件给admin
-        #     "level": "ERROR",
-        #     "filters": ["require_debug_false"],
-        #     "class": "django.utils.log.AdminEmailHandler",
-        # },
+        "celery_file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": "ops_platform/logs/celery.log",
+            "formatter": "verbose",
+            "maxBytes": 1024 * 1024 * 10,  # 10 MB
+            "backupCount": 5,
+            'level': "INFO"
+        },
         'file': {  # 对INFO级别以上信息以日志文件形式保存
             'level': "INFO",
             'class': 'logging.handlers.RotatingFileHandler',  # 滚动生成日志，切割
@@ -205,6 +217,11 @@ LOGGING = {
             "level": "DEBUG",
             "propagate": False,  # 向不向更高级别的logger传递
         },
+        "celery": {
+            "handlers": ["celery_file"],
+            "level": "INFO",
+            "propagate": False,
+        },
     }
 }
 
@@ -212,4 +229,15 @@ AUTH_USER_MODEL = "users.Users"
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-RSA_FILE="C:Users\\Administrator\\.ssh\\id_rsa"
+RSA_FILE = "C:Users\\Administrator\\.ssh\\id_rsa"
+
+from datetime import timedelta
+
+CELERYBEAT_SCHEDULE = {
+    'check_every_30_seconds': {
+        # 任务路径
+        'task': 'celery_app.tasks.check_all_hosts',
+        # 每30秒执行一次
+        'schedule': timedelta(seconds=5),
+    }
+}
